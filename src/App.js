@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import Navbar from './components/Navbar/Navbar'
 import Auth from './components/Auth/Auth'
+import SpanishFood from './components/SpanishFood/SpanishFood'
 
 function App() {
 
@@ -32,18 +33,10 @@ function App() {
   return (
     <div className="App">
       <Navbar clearToken={clearToken} />
-      { !sessionToken ? <Auth updateToken={updateToken} /> : <TuesdayContent sessionToken={sessionToken} /> }
+      { !sessionToken ? <Auth updateToken={updateToken} /> : <SpanishFood sessionToken={sessionToken} /> }
     </div>
   );
 }
 
-const TuesdayContent = (props) => {
-  return (
-    <div>
-      <h1><b>++++++++++++++++++++</b></h1>
-      <p>{props.sessionToken}</p>
-    </div>
-  )
-}
 
 export default App;
