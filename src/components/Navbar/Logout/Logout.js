@@ -6,7 +6,7 @@ import logoutPic from '../../../assets/logout-512.png'
 const Logout = (props) => {
 
   const logout = () => {
-    props.setSessionToken(false)
+    props.clearToken()
   }
 
   return (
